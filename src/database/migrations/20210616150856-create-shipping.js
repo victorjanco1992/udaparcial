@@ -15,7 +15,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       orders_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        unique: true,
+        references: {
+          model: 'orders',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

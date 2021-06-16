@@ -33,21 +33,13 @@ module.exports = {
         }
       },
       users_addresses_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       states_id: {
         type: Sequelize.INTEGER,
         unique: true,
         references: {
           model: 'states',
-          key: 'id'
-        }
-      },
-      shipping_id: {
-        type: Sequelize.INTEGER,
-        unique: true,
-        references: {
-          model: 'shippings',
           key: 'id'
         }
       },
